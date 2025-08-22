@@ -4,7 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-    TasksModule, 
+    TasksModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       database: 'task-management',
@@ -14,7 +14,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       port: 5432,
       autoLoadEntities: true,
       synchronize: true,
-    }), 
+    }),
   ],
 })
 export class AppModule {}
