@@ -96,3 +96,89 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Section 1 - Intro
+
+```bash
+# Verify the Node.js version:
+$ node -v
+
+# Verify npm version:
+$ npm -v
+
+# Install yarn:
+$ npm install --global yarn
+
+# Verify yarn version:
+$ yarn --version
+
+# Install nestjs
+$ yarn global add @nestjs/cli
+
+# Verify nestjs version:
+$ nest -v
+```
+
+## Section 2 - Create new module & RestAPI
+
+```bash
+# Create a project
+$ nest new nestjs-task-management
+# then choose yarn
+
+# nest generate help
+$ nest g --help
+
+# Create a module
+$ nest g module tasks
+
+# Create a controller
+$ nest g controller tasks --no-spec # do not generate spec files
+
+# Create a service
+$ nest g service tasks --no-spec # do not generate spec files
+```
+
+## Section 3 - Validation & Error Handling
+
+```bash
+# Install validator package
+$ yarn add class-validator class-transformer
+
+# nest generate help
+$ nest g --help
+
+# Install uuid package
+$ yarn add uuid
+```
+
+## Section 4 - Data Persistence & TypeORM
+
+```bash
+# Install TypeORM Postgres
+$ yarn add typeorm @nestjs/typeorm pg
+
+# remove uuid package
+$ yarn remove uuid
+```
+
+## Section 5 - Authentication & Authorization
+
+```bash
+# Create auth module
+$ nest g module auth
+
+# Create auth controller
+$ nest g controller auth --no-spec
+
+# Create auth service
+$ nest g service auth --no-spec
+
+# Install Bcrypt
+$ yarn add bcrypt
+
+# Install 5 packages related with passport & jwt
+$ yarn add @nestjs/jwt @nestjs/passport passport passport-jwt @types/passport-jwt
+```
+
+use @UseGuards(AuthGuard()) to be protected only to signed in users
